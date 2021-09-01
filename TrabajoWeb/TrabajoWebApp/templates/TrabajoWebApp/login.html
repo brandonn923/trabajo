@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static%}
+    <meta charset="utf-8">
+    <title>Login Form Design One | Fazt</title>
+    <link href="{%static  '/pregunta/css/master.css'%}" rel="stylesheet" >
+  </head>
+  <body>
+
+    <div class="login-box">
+      <img src="{%static  '/pregunta/img/logo.png'%}" class="avatar" alt="Avatar Image">
+      <h1>Login</h1>
+      
+    <form class="form" method="POST" >
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <input type="submit" value="Log In">
+    <a href="{% url 'registar' %}">Desea Registarse </a>
+    <!-- <button type="submit" id="submit">login</button> -->
+
+    </form>
+      <!-- <form>
+       
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter Username">
+  
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password">
+        <input type="submit" value="Log In">
+        <a href="#">Lost your Password?</a><br>
+        <a href="#">Don't have An account?</a>
+      </form> -->
+    </div>
+  </body>
+</html>
+
+
+<!-- <form class="form" method="POST" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" id="submit">login</button>
+
+</form> -->
+

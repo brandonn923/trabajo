@@ -1,0 +1,18 @@
+{% extends "TrabajoWebApp/base.html"%}
+{% load static %}
+{% block content %}
+<h1 style="color: aliceblue;">work Sample</h1>
+
+<form method="POST" >
+    <div style="color: aliceblue;" >
+        {% csrf_token %}
+        {{ form.as_p }}
+    </div>
+    <!-- <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+    </div> -->
+    <button type="submit" class="btn btn-primary">Guadar</button>
+  </form>
+
+{% endblock %}

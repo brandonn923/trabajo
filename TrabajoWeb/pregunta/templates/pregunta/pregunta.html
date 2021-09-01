@@ -1,0 +1,48 @@
+{% extends "TrabajoWebApp/base.html"%}
+{% load static %}
+{% block content %}
+<!-- <nav class="nav">
+    <a class="nav-link active" href="{% url 'pregunta' %}">PreguntasActive</a>
+    <a class="nav-link" href="{% url 'preguntasmulti' %}">pregunta mult</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </nav> -->
+  <nav style="color: black;" class="navbar navbar-expand-lg navbar-light bg-light ;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'formulario' %}">Formulario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'pregunta' %}">Preguntas </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'preguntasmulti' %}">Preguntas CON SU DATOS </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="contenedorFormulario">
+  <h1 style="color: aliceblue;">Pregunta abierta</h1>
+    <form style=" text-align: center;"  method="POST" >
+        {% csrf_token %}
+         <table style="color: aliceblue" >{{ form }}</table>
+         <a class="nav-link text-uppercase text-expanded" href="{% url 'index' %}"><button type="submit">Guadar</button></a>
+        
+    </form>
+    {{mensaje}}
+</div>
+
+
+{% endblock %}
